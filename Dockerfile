@@ -8,6 +8,9 @@ RUN git clone https://github.com/EvolutionAPI/evolution-api.git .
 
 RUN npm install
 
-EXPOSE 8080
+# 🔥 ESSA LINHA RESOLVE O ERRO
+RUN npx prisma generate
+
+EXPOSE 3000
 
 CMD ["npm", "run", "start"]
