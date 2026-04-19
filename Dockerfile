@@ -8,10 +8,7 @@ RUN git clone https://github.com/EvolutionAPI/evolution-api.git .
 
 RUN npm install
 
-# 🔥 ESSA LINHA RESOLVE O ERRO
-RUN npx prisma generate
-
 EXPOSE 3000
 
-CMD ["npm", "run", "start"]
-
+# 🔥 roda o prisma quando iniciar
+CMD npx prisma generate && npm run start
